@@ -17,6 +17,10 @@ public class Book {
 		return id + ", " + title + ", " + author;
 	}
 
+	public String printAll(){
+		return "ID: " + id + " ---  Titlle: " + title + " --- Author: " + author;
+	}
+
 	public String getId() {
 		return id;
 	}
