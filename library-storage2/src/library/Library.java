@@ -18,7 +18,8 @@ public class Library {
 					Book book = new Book(parts[0].trim(), parts[1].trim(), parts[2].trim());
 					books.put(book.getId(), book);
 				} else if (parts.length == 4) {
-				    books.put(parts[0].trim(), new Audiobook(parts[0].trim(), parts[1].trim(), parts[2].trim(), Integer.parseInt(parts[3].trim())));
+					books.put(parts[0].trim(), new Audiobook(parts[0].trim(), parts[1].trim(), parts[2].trim(),
+							Integer.parseInt(parts[3].trim())));
 				}
 			}
 		}
@@ -57,10 +58,21 @@ public class Library {
 		}
 
 	}
+
+	public void findBook(String id) {
+		for (Map.Entry<String, Book> entry : books.entrySet()) {
+			if (entry.getKey().equals(id)) {
+				System.out.println(entry.getValue().printAll());
+			} else if (entry.getValue().getAutore().equals(id) || entry.getValue().getTitolo().equals(id)) {
+				System.out.println(entry.getValue().printAll());
+			}
+		}
+	}
+
 	public void printBooks() {
 		for (Map.Entry<String, Book> entry : books.entrySet()) {
-	
-		System.out.println(entry.getValue().printAll());	
+
+			System.out.println(entry.getValue().printAll());
 		}
 	}
 
