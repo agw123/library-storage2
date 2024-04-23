@@ -57,5 +57,11 @@ public class Library {
 		}
 
 	}
+	public void printBooks() {
+		for (Map.Entry<String, Book> entry : books.entrySet()) {
+	
+		System.out.println(entry.getValue().printAll());	
+		}
+	}
 
 }
