@@ -6,16 +6,16 @@ public class Main {
 
 	public static void main(String[] args) {
 		Library library = new Library();
+	//	String url = "library.txt";
+		String url = "C:\\Users\\Agata\\OneDrive\\Desktop\\JavaOnboarding Accedemia Informatica\\esercizi_input_output\\library.txt";
 		try {
-			library.uploadBook(
-					"C:\\Users\\Agata\\OneDrive\\Desktop\\JavaOnboarding Accedemia Informatica\\esercizi_input_output\\books.txt");
+			library.uploadBook(url);
 			library.addAudiobook("3423", "1984", "George Orwell", 500);
 			library.addBook("663", "Metamorfosi", "Franz Kafka");
 			library.removeBook("005");
 			library.removeBook("001");
-			library.saveBook(
-					"C:\\Users\\Agata\\OneDrive\\Desktop\\JavaOnboarding Accedemia Informatica\\esercizi_input_output\\library.txt");
-			System.out.println("This is a unwanted modification");
+			library.saveBook(url);
+			library.printBooks();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
