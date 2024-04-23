@@ -13,4 +13,9 @@ public class Audiobook extends Book{
 	    public String toString() {
 	        return super.toString() + ", " + duration;
 	    }
+ @Override
+	 public String printAll(){
+		 return super.printAll() + " Duration: " + duration;
+	 }
+	 
 }
