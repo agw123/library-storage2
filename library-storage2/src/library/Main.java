@@ -15,6 +15,7 @@ public class Main {
 			library.removeBook("001");
 			library.saveBook(
 					"C:\\Users\\Agata\\OneDrive\\Desktop\\JavaOnboarding Accedemia Informatica\\esercizi_input_output\\library.txt");
+			System.out.pritnln("This is a unwanted modification");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
