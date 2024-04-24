@@ -17,7 +17,7 @@ public class Book {
 		return id + ", " + title + ", " + author;
 	}
 
-	public String printAll() {
+	public String printAll(){
 		return "ID: " + id + " ---  Titlle: " + title + " --- Author: " + author;
 	}
 
@@ -32,5 +32,6 @@ public class Book {
 	public String getAutore() {
 		return author;
 	}
-
+	
+	
 }
